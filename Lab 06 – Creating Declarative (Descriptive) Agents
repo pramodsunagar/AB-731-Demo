@@ -1,15 +1,10 @@
-# Lab 06 – Creating Declarative (Descriptive) Agents in Microsoft 365 Copilot Chat
+# Lab 06 – Creating Declarative Agents in Microsoft 365 Copilot Chat
 
-> **Course:** AB-731 – Microsoft Certified: AI Transformation Leader
->
-> **Module:** Microsoft 365 Copilot Chat – Declarative Agents
->
-> **Lab Type:** Executive Demonstration
->
-> **Duration:** 45–60 Minutes
->
-> **Application:** Microsoft 365 Copilot Chat
->
+> **Course:** AB-731 – Microsoft Certified: AI Transformation Leader  
+> **Module:** Microsoft 365 Copilot Chat – Declarative Agents  
+> **Lab Type:** Executive Demonstration  
+> **Duration:** 45–60 Minutes  
+> **Application:** Microsoft 365 Copilot Chat  
 > **Audience:** CEOs, CIOs, CTOs, Business Leaders, Digital Transformation Leaders, AI Champions
 
 ---
@@ -38,26 +33,25 @@ After completing this lab, participants will be able to:
 
 - Understand Declarative Agents
 - Create an agent using Microsoft 365 Copilot Chat
-- Define agent instructions
 - Configure knowledge sources
-- Ask business-focused questions
-- Improve responses through better instructions
-- Understand governance considerations
+- Write effective agent instructions
+- Test business scenarios
+- Understand governance and security considerations
 
 ---
 
 # Business Scenario
 
-## Company
+## Organization
 
 **Contoso Manufacturing Ltd.**
 
-The organization recently deployed Microsoft 365 Copilot.
+The organization recently deployed Microsoft 365 Copilot across Microsoft 365.
 
 Executives spend significant time reviewing:
 
 - Emails
-- Teams Chats
+- Teams chats
 - SharePoint documents
 - Project reports
 - Meeting notes
@@ -70,134 +64,93 @@ Leadership wants AI assistants capable of answering business questions instantly
 
 # Business Challenge
 
-Without Declarative Agents
-
-Executives
-
-- Search multiple systems
-- Read lengthy reports
-- Contact project managers
-- Wait for manual updates
-
-Estimated effort
-
-**2–3 Hours per Week**
-
----
-
-With Declarative Agents
-
-Executives simply ask:
-
-> What are the top risks this week?
-
-> Which projects need my attention?
-
-> Summarize AI initiatives.
-
-Response time
-
-**Less than one minute**
+| Without Declarative Agents | With Declarative Agents |
+|----------------------------|-------------------------|
+| Search multiple systems | Ask one question |
+| Read lengthy reports | Receive concise summaries |
+| Contact project managers | Self-service executive insights |
+| Prepare manually for meetings | AI-assisted meeting preparation |
+| 2–3 hours/week | Less than one minute |
 
 ---
 
 # Lab Architecture
 
-```
-SharePoint
-
-Teams
-
+```text
+SharePoint Sites
+        │
+Teams Channels
+        │
 Word Documents
-
+        │
 Excel Reports
-
+        │
 Meeting Notes
-
-↓
-
+        │
+───────────────
 Microsoft 365 Copilot
-
-↓
-
-Declarative Agent
-
-↓
-
-Business Questions
-
-↓
-
-Executive Insights
+        │
+ Declarative Agent
+        │
+ Business Questions
+        │
+ Executive Insights
 ```
 
 ---
 
-# Agent 1
+# Lab 1 – Create an Executive Daily Brief Agent
 
-# Executive Daily Brief Agent
+## Business Scenario
 
----
+The CEO begins every morning by reviewing dozens of emails, Teams conversations, meeting notes, project updates, and executive reports.
 
-# Business Scenario
-
-The CEO starts every day by reviewing multiple sources of information.
-
-Instead of reading emails and reports, the CEO wants a personalized executive briefing.
+Rather than searching through multiple systems, the CEO wants a single AI assistant that provides a concise executive briefing.
 
 ---
 
-# Business Objective
+## Business Objective
 
-Create an agent that provides a daily executive summary.
+Create a Declarative Agent that generates a personalized executive briefing.
 
 ---
 
-# Expected Capabilities
+## Expected Capabilities
 
-The agent should answer questions like:
+The agent should answer questions such as:
 
 - What happened overnight?
-- What meetings require my attention?
-- What projects are delayed?
+- Which projects need executive attention?
 - What decisions are pending?
-- What are today's business priorities?
+- Which AI initiatives are delayed?
+- What are today's top priorities?
 
 ---
 
-# Step 1
+## Step 1 – Open Microsoft 365 Copilot Chat
 
-Open Microsoft 365 Copilot Chat
-
-Select
-
-**Create Agent**
+1. Open **Microsoft 365 Copilot Chat**
+2. Select **Create an Agent**
 
 ---
 
-# Step 2
+## Step 2 – Configure Agent Details
 
-Agent Name
+### Agent Name
 
-```
+```text
 Executive Daily Brief
 ```
 
----
+### Description
 
-# Step 3
-
-Description
-
-```
-Provides a daily executive summary of business activities, strategic initiatives, leadership updates, project status, and business risks.
+```text
+Provides a daily executive summary of business activities, strategic initiatives, leadership updates, project status, business risks, and pending executive decisions.
 ```
 
 ---
 
-# Step 4
-
-Instructions
+## Step 3 – Configure Instructions
 
 ```text
 You are an Executive Assistant supporting the Chief Executive Officer.
@@ -206,46 +159,34 @@ Always provide concise executive summaries.
 
 Prioritize:
 
-Business performance
-
-Executive meetings
-
-Strategic initiatives
-
-Project status
-
-Business risks
-
-Customer issues
-
-AI transformation progress
-
-Executive decisions awaiting approval
+• Business performance
+• Executive meetings
+• Strategic initiatives
+• Project status
+• Business risks
+• Customer issues
+• AI transformation progress
+• Decisions awaiting approval
 
 Present information using:
 
-Executive Summary
-
-Key Highlights
-
-Business Risks
-
-Recommended Actions
+1. Executive Summary
+2. Key Highlights
+3. Business Risks
+4. Recommended Actions
 
 Keep responses concise.
 
 Do not speculate.
 
-Use only information available in approved enterprise content.
+Use only approved enterprise knowledge.
 ```
 
 ---
 
-# Step 5
+## Step 4 – Configure Knowledge Sources
 
-Knowledge Sources
-
-Connect
+Connect the following enterprise content:
 
 - SharePoint Sites
 - Teams Channels
@@ -258,11 +199,9 @@ Connect
 
 ---
 
-# Step 6
+## Step 5 – Suggested Conversation Starters
 
-Suggested Conversation Starters
-
-```
+```text
 Summarize today's executive priorities.
 
 What decisions require CEO approval?
@@ -276,43 +215,33 @@ Which strategic projects are delayed?
 
 ---
 
-# Demonstration Questions
+## Demonstration Prompts
 
----
-
-## Prompt 1
+### Prompt 1
 
 ```text
 Provide today's Executive Brief.
 ```
 
----
-
-## Prompt 2
+### Prompt 2
 
 ```text
 Summarize strategic initiatives currently in progress.
 ```
 
----
-
-## Prompt 3
+### Prompt 3
 
 ```text
 Which projects require executive attention?
 ```
 
----
-
-## Prompt 4
+### Prompt 4
 
 ```text
 Summarize business risks discussed this week.
 ```
 
----
-
-## Prompt 5
+### Prompt 5
 
 ```text
 Prepare talking points for today's Executive Committee meeting.
@@ -320,304 +249,25 @@ Prepare talking points for today's Executive Committee meeting.
 
 ---
 
-# Expected Response
+## Expected Output
 
-Executive Summary
-
-Current Priorities
-
-Business Risks
-
-AI Initiatives
-
-Upcoming Meetings
-
-Recommended Executive Actions
+- Executive Summary
+- Current Priorities
+- Business Risks
+- AI Initiatives
+- Upcoming Meetings
+- Recommended Executive Actions
 
 ---
 
-# Executive Discussion
+## Executive Discussion
 
-How much executive preparation time could this save?
+**Discussion Questions**
 
----
-
-# Agent 2
-
-# AI Transformation Advisor
+1. How much preparation time could this save every morning?
+2. Which executives would benefit from this agent?
+3. How should sensitive information be governed?
 
 ---
 
-# Business Scenario
-
-The CIO is responsible for leading enterprise AI transformation.
-
-The organization has
-
-- AI Roadmaps
-- Governance Policies
-- Adoption Reports
-- Responsible AI Guidelines
-- Training Plans
-- Microsoft 365 Copilot Adoption Reports
-
-The CIO wants one agent capable of answering AI transformation questions.
-
----
-
-# Business Objective
-
-Create an AI Transformation Advisor.
-
----
-
-# Step 1
-
-Agent Name
-
-```
-AI Transformation Advisor
-```
-
----
-
-# Step 2
-
-Description
-
-```
-Provides executive guidance on enterprise AI strategy, Microsoft 365 Copilot adoption, governance, responsible AI, implementation roadmap, and organizational readiness.
-```
-
----
-
-# Step 3
-
-Instructions
-
-```text
-You are an AI Transformation Consultant supporting executive leadership.
-
-Always provide strategic recommendations.
-
-Answer questions related to:
-
-AI Strategy
-
-Microsoft 365 Copilot
-
-Business Value
-
-Responsible AI
-
-Governance
-
-Security
-
-Compliance
-
-AI Adoption
-
-Business KPIs
-
-Change Management
-
-When appropriate include:
-
-Business Impact
-
-Implementation Complexity
-
-Recommended Next Steps
-
-Executive Recommendation
-
-Only use approved organizational knowledge.
-```
-
----
-
-# Step 4
-
-Knowledge Sources
-
-Connect
-
-- AI Transformation Strategy
-- Responsible AI Policy
-- Microsoft Copilot Adoption Guide
-- Governance Framework
-- AI Roadmap
-- Change Management Plan
-- AI Business Cases
-- Training Materials
-
----
-
-# Step 5
-
-Conversation Starters
-
-```
-What is our AI transformation roadmap?
-
-Summarize our Responsible AI policy.
-
-What AI initiatives are currently active?
-
-How should we improve Microsoft Copilot adoption?
-
-Recommend next AI investments.
-```
-
----
-
-# Demonstration Questions
-
----
-
-## Prompt 1
-
-```text
-What is our AI Transformation Strategy?
-```
-
----
-
-## Prompt 2
-
-```text
-Summarize our Responsible AI principles.
-```
-
----
-
-## Prompt 3
-
-```text
-Recommend executive actions to accelerate Copilot adoption.
-```
-
----
-
-## Prompt 4
-
-```text
-What business KPIs should leadership monitor?
-```
-
----
-
-## Prompt 5
-
-```text
-What are the biggest risks affecting AI adoption?
-```
-
----
-
-## Prompt 6
-
-```text
-Prepare a Board briefing on our AI transformation journey.
-```
-
----
-
-# Expected Response
-
-Executive Summary
-
-Current AI Status
-
-Business Value
-
-Governance
-
-Risks
-
-Recommendations
-
----
-
-# Executive Discussion
-
-Would this reduce dependence on manual status reporting?
-
-How could leadership use this during Board meetings?
-
----
-
-# Best Practices
-
-- Keep the agent focused on one business role.
-- Use clear, detailed instructions.
-- Connect only trusted enterprise knowledge sources.
-- Write conversation starters that reflect common business questions.
-- Regularly review and update the agent's instructions and knowledge sources.
-- Ensure appropriate permissions and data governance are applied.
-
----
-
-# Governance Considerations
-
-Before deploying Declarative Agents, organizations should define:
-
-- Data access permissions
-- Responsible AI policies
-- Content ownership
-- Information lifecycle management
-- Security and compliance controls
-- Periodic review of agent instructions and knowledge sources
-
----
-
-# Business Value
-
-| Traditional Approach | Declarative Agent |
-|----------------------|-------------------|
-| Search multiple documents | Ask one question |
-| Read lengthy reports | Executive summary in seconds |
-| Depend on subject matter experts | Self-service business insights |
-| Manual meeting preparation | AI-assisted preparation |
-| Hours of information gathering | Minutes of focused review |
-
----
-
-# Key Takeaways
-
-- Declarative Agents provide role-specific AI assistants grounded in enterprise knowledge.
-- Well-defined instructions and curated knowledge sources produce higher-quality responses.
-- Agents improve executive productivity by reducing time spent searching for information.
-- Governance, security, and Responsible AI practices remain essential when deploying organizational agents.
-- Declarative Agents complement—not replace—executive judgment and decision-making.
-
----
-
-# Optional Challenge
-
-Create a third Declarative Agent called **Sales Performance Advisor**.
-
-The agent should:
-
-- Summarize weekly sales performance
-- Highlight top-performing regions
-- Identify declining products
-- Recommend executive actions
-- Forecast next-quarter opportunities
-
-Configure:
-
-- Agent name
-- Description
-- Instructions
-- Knowledge sources
-- Five conversation starters
-
-Then demonstrate the agent by asking at least five business questions relevant to executive sales reviews.
-
----
-
-## End of Lab
-
-**Next Suggested Lab:** Building Custom Agents using Microsoft Copilot Studio
+> Repeat the same structure for **Lab 2 – AI Transformation Advisor**, using identical heading levels (`##`, `###`), numbered steps, code blocks for prompts, and discussion sections.
